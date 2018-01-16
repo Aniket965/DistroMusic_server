@@ -1,0 +1,30 @@
+{
+  "name": "distro_music_server",
+  "version": "1.0.0",
+  "description": "server he",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aniket965/DistroMusic_server.git"
+  },
+  "keywords": [
+    "music",
+    "distributed"
+  ],
+  "author": "aniket965",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Aniket965/DistroMusic_server/issues"
+  },
+  "homepage": "https://github.com/Aniket965/DistroMusic_server#readme",
+  "dependencies": {
+    "emojifylogs": "0.0.2",
+    "koa": "^2.4.1",
+    "koa-router": "^7.3.0",
+    "socket.io": "^2.0.4",
+    "socket.io-stream": "^0.9.1"
+  }
+}
