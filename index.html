@@ -1,16 +1,56 @@
-<!doctype html>
-<html>
-  <head>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
-        <script>
-          var socket = io();
-        </script>
+<html lang="en">
 
-    <title>distro</title>
-    <style>
-    </style>
-  </head>
-  <body>
-      <h1>LOLMUSICFYING</h1>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DistroMusic</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+  rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/addons/p5.sound.js"></script>
+  <script src="js/sketch.js"></script>
+
+</head>
+
+<body>
+  <div class="header">
+    <h1>DISTRO MUSIC</h1>
+    <p>LOCALLY DISTRIBUTED MUSIC</p>
+  </div>
+  <div class="DeviceSelector" >
+  <div class="sideButton">
+    <i class="material-icons">keyboard_arrow_left</i>
+  </div>
+  <div class="devices"></div>
+  <div class="sideButton">
+    <i class="material-icons">keyboard_arrow_right</i>
+  </div>
+</div>
+  <div class="song-visualizer">
+
+  </div>
+  <div class="player-container">
+    <div class='music-player'>
+      <div class='play-button'>
+        <i class="material-icons">play_arrow</i>
+      </div>
+      <div class='time-start'>
+        <p>0:00</p>
+      </div>
+      <div class='song-name'>
+        <p>Tycho-Awake</p>
+      </div>
+      <div class='time-left'>
+        <p>-4:10</p>
+      </div>
+      <div class='Volume'>
+        <i class="material-icons">volume_up</i>
+      </div>
+
+    </div>
+  </div>
+</body>
+
 </html>
