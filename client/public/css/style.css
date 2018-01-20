@@ -4,7 +4,7 @@ body {
 
 }
 .DeviceSelector {
-  background: red;
+  /* background: red; */
   height: 20vh;
   width: 100%;
   display: grid;
@@ -26,9 +26,21 @@ body {
   justify-self: center;
 }
 .devices {
-  background: red;
+  /* background: red; */
   height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+.devices img {
+  height: 8vh;
+}
+.devices p {
+  font-weight: 500;
+  color: gray;
+}
+
 
 .header {
   /* background: red; */
