@@ -7,10 +7,16 @@ function setup() {
     document.getElementById('playButton').addEventListener('click', () => togglePlaying())
     console.log('loaded')
   })
+ let div = document.getElementById('sv')
+ console.log(div.getAttribute('width'))
+  var canvas = createCanvas(div.offsetWidth, div.offsetHeight);
+ canvas.parent('sv');
+ background(255, 0, 200);
 
 }
 function draw() {
-
+    background(244, 248, 252);
+rect(mouseX, mouseY,100, 100);
 }
 const togglePlaying = () => {
   if (song.isPlaying()) {

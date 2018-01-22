@@ -7,6 +7,8 @@ const app = new Koa()
 app.use(router.routes()).use(router.allowedMethods());
 const http = require('http').createServer(app.callback())
 const io = require('socket.io')(http)
+const ss = require('socket.io-stream')
+
 
 router.get('/', async (ctx,next) => {
     ctx.type = 'html'
