@@ -19,15 +19,17 @@ function setup() {
   .addEventListener("click", () => muteToggle());
   
   fft = new p5.FFT();
-  let div = document.getElementById("sv");
-  var canvas = createCanvas(div.offsetWidth, div.offsetHeight);
-  canvas.parent("sv");
-  background(15, 32, 50);
-
+  
+  
   
 }
 function draw() {
- background(15, 32, 50);
+  
+  var div = document.getElementById("sv");
+  var canvas = createCanvas(div.offsetWidth, div.offsetHeight);
+  canvas.parent("sv");
+  background(15, 32, 50);
+  
   var spectrum = fft.analyze();
   noStroke();
   fill(255); // spectrum is green
