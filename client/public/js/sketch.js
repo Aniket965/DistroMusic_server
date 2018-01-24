@@ -2,6 +2,10 @@
 let song;
 let fft;
 let ismute = false
+let duration;
+let current_time;
+let left_time;
+let song_name;
 function setup() {
   amp = new p5.Amplitude();
   song = loadSound("http://localhost:3000/assets/lol.mp3", () => {
@@ -11,26 +15,19 @@ function setup() {
     console.log("loaded");
     song.play()
   });
-  let muteToggle = document.getElementById('mute-toggle')
-  muteToggle.addEventListener('click',()=>{
-
-if(ismute) {
-  document.getElementById('mute-toggle').innerHTML ="volume_up"
-  song.setVolume(1)
-}else{
-  song.setVolume(0)
-    document.getElementById('mute-toggle').innerHTML ="volume_off"
-}
-ismute = !ismute
-  })
+  document.getElementById('mute-toggle')
+  .addEventListener("click", () => muteToggle());
+  
   fft = new p5.FFT();
   let div = document.getElementById("sv");
   var canvas = createCanvas(div.offsetWidth, div.offsetHeight);
   canvas.parent("sv");
   background(15, 32, 50);
+
+  
 }
 function draw() {
-  background(15, 32, 50);
+ background(15, 32, 50);
   var spectrum = fft.analyze();
   noStroke();
   fill(255); // spectrum is green
@@ -38,6 +35,15 @@ function draw() {
     var x = map(i, 0, spectrum.length, 0, width);
     var h = -height + map(spectrum[i], 0, 255, height, 0);
     rect(x, height, 10, h )
+
+    duration=song.duration();
+   current_time= song.currentTime()
+    left_time=current_time-duration;
+    
+
+    document.getElementById('current_time').innerHTML=parseFloat(current_time/60).toFixed(2)
+    document.getElementById('left_time').innerHTML=parseFloat(left_time/60).toFixed(2)
+    document.getElementById('song_name').innerHTML="lol";
   }
 }
 const togglePlaying = () => {
@@ -63,3 +69,16 @@ $(document).ready(function() {
 		}
 	});
 });
+
+const muteToggle = () => {
+if(ismute) {
+  document.getElementById('mute-toggle').innerHTML ="volume_up"
+  song.setVolume(1)
+}else{
+  song.setVolume(0)
+    document.getElementById('mute-toggle').innerHTML ="volume_off"
+}
+ismute = !ismute
+}
+
+
