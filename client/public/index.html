@@ -14,6 +14,7 @@
      </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/addons/p5.sound.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="js/sketch.js"></script>
 
 </head>
@@ -40,8 +41,35 @@
   </div>
   <div class="player-container">
     <div class='music-player'>
-      <div class='play-button'>
-        <i class="material-icons" id="playButton" >play_arrow</i>
+      <div class='play-button' id="playButton">
+        <svg width="104" height="104" id='pause' viewBox="0 20 200 55">
+          <!-- <circle id="circle" cx="51" cy="51" r="50" stroke-dasharray="314" stroke-dashoffset="0" style="stroke-width:2px;stroke:white;" /> -->
+          <line id='line1' x1="38" y1="30" x2="38" y2="70" style="stroke-width:4px;stroke:gray;stroke-linecap: round;" />
+          <path id='line2' d="M 66 30 L 66 50 L 66 70" rx="10" ry="10" style="stroke-width:4px;stroke:gray;fill:gray;stroke-linejoin: round;stroke-linecap: round;">
+            <animate
+              attributeName="d"
+              dur="300ms"
+              from="M 66 30 L 66 50 L 66 70"
+              to="M 38 30 L 70 50 L 38 70"
+              begin="indefinite"
+              fill="freeze"
+              id="from_pause_to_play"
+            />
+          </path>
+          <animate
+            xlink:href="#line2"
+            attributeName="d"
+            dur="300ms"
+            from="M 38 30 L 70 50 L 38 70"
+            to="M 66 30 L 66 50 L 66 70"
+            fill="freeze"
+            id="from_play_to_pause"
+            begin="indefinite"
+          />
+      </svg>
+      <!-- <svg width="100%" height="400%">
+        <circle id="circle" cx="100" cy="100" r="40" fill="none" stroke="#000" stroke-width="4"></circle>
+      </svg> -->
       </div>
       <div class='time-start'>
         <p>0:00</p>

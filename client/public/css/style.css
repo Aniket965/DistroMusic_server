@@ -69,6 +69,14 @@ body {
   grid-template-columns: 10vw 10vw auto 10vw 10vw;
   border-top: 4px solid rgb(206, 206, 206);
 }
+.play-button svg{
+display: flex;
+justify-content: center;
+align-items: center;
+widows: 50px;
+height: 100px;
+}
+
 .player-container{
   display: flex;
   justify-content: center;
@@ -89,6 +97,18 @@ body {
   color: gray;
 }
 
+svg {
+	margin: 0px auto;
+  display: block;
+}
+/* This animates the circle when it switches to play */
+#circle {
+	transition: stroke-dashoffset 300ms ease-in;
+	stroke-dashoffset: 0;
+}
+#circle.play {
+	stroke-dashoffset: 314;
+}
 
 .song-visualizer{
  margin-top: 5vh;
