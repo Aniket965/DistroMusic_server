@@ -115,3 +115,6 @@ svg {
   height: 40vh;
   width: 100%;
 }
+.Volume{
+  cursor: pointer;
+}

@@ -1,6 +1,7 @@
 
 let song;
 let fft;
+let ismute = false
 function setup() {
   amp = new p5.Amplitude();
   song = loadSound("http://localhost:3000/assets/lol.mp3", () => {
@@ -10,6 +11,18 @@ function setup() {
     console.log("loaded");
     song.play()
   });
+  let muteToggle = document.getElementById('mute-toggle')
+  muteToggle.addEventListener('click',()=>{
+
+if(ismute) {
+  document.getElementById('mute-toggle').innerHTML ="volume_up"
+  song.setVolume(1)
+}else{
+  song.setVolume(0)
+    document.getElementById('mute-toggle').innerHTML ="volume_off"
+}
+ismute = !ismute
+  })
   fft = new p5.FFT();
   let div = document.getElementById("sv");
   var canvas = createCanvas(div.offsetWidth, div.offsetHeight);
