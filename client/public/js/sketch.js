@@ -6,6 +6,7 @@ let duration;
 let current_time;
 let left_time;
 let song_name;
+let playPercent;
 function setup() {
   amp = new p5.Amplitude();
   song = loadSound("http://localhost:3000/assets/lol.mp3", () => {
@@ -27,8 +28,9 @@ function draw() {
   
   var div = document.getElementById("sv");
   var canvas = createCanvas(div.offsetWidth, div.offsetHeight);
+  
   canvas.parent("sv");
-  background(15, 32, 50);
+  //background(15, 32, 50);
   
   var spectrum = fft.analyze();
   noStroke();
@@ -41,11 +43,12 @@ function draw() {
     duration=song.duration();
    current_time= song.currentTime()
     left_time=current_time-duration;
-    
+    playPercent=(current_time/duration)*100;
 
     document.getElementById('current_time').innerHTML=parseFloat(current_time/60).toFixed(2)
     document.getElementById('left_time').innerHTML=parseFloat(left_time/60).toFixed(2)
     document.getElementById('song_name').innerHTML="lol";
+    //document.querySelector(".music-player").style.border-top.backgroundColor = "red";
   }
 }
 const togglePlaying = () => {

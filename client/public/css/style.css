@@ -119,3 +119,22 @@ svg {
 .Volume{
   cursor: pointer;
 }
+
+.song-visualizer {
+ 
+  background: red;
+  -webkit-animation: mymove 5s infinite; 
+  animation: mymove 5s infinite;
+}
+
+
+@-webkit-keyframes mymove {
+  from {background-color: red;}
+  to {background-color: blue;}
+}
+
+
+@keyframes mymove {
+  from {background-color: red;}
+  to {background-color: blue;}
+}
