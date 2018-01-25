@@ -21,7 +21,7 @@ body {
   justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 5px 0px;
-  background: #edecf3;
+  background: white;
   justify-self: center;
 }
 .devices {
@@ -188,6 +188,11 @@ svg {
 } */
 
 .load {
-  width: 90%;
-  background-color: #4caf50;
+  height:4px;
+  width: 0%;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
 }

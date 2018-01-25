@@ -38,10 +38,6 @@ function draw() {
     current_time = song.currentTime();
     left_time = current_time - duration;
     playPercent = current_time / duration * 100;
-    // var myElement = document.getElementById('load')
-    // myElement.style.width = playPercent;
-    //var myElement=$(load).width()
-    //console.log(myElement);
     document.getElementById("current_time").innerHTML = parseFloat(
       current_time / 60
     ).toFixed(2);
@@ -49,7 +45,10 @@ function draw() {
       left_time / 60
     ).toFixed(2);
     document.getElementById("song_name").innerHTML = "lol";
+
+    // console.log(playPercent)
   }
+  document.getElementById('loader').style.width = `${Math.floor(playPercent)}%`
 }
 const togglePlaying = () => {
   if (song.isPlaying()) {
