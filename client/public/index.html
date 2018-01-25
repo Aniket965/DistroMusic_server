@@ -8,8 +8,10 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+  <script src="js/socket.io-stream.js"></script>
   <script>
     var socket = io();
+
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/addons/p5.sound.js"></script>
@@ -42,7 +44,7 @@
   <div class="container">
     <div class="load" id="loader"></div>
   </div>
-
+  <input type="file" id="fileLoader" >
   <div class="player-container">
 
     <div class='music-player'>
@@ -65,6 +67,7 @@
       </div>
       <div class='song-name' id="song_name">
         <p>Tycho-Awake</p>
+  
       </div>
       <div class='time-left' id="left_time">
         <p>-4:10</p>
