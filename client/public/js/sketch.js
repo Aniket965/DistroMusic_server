@@ -38,12 +38,12 @@ function draw() {
     current_time = song.currentTime();
     left_time = current_time - duration;
     playPercent = current_time / duration * 100;
-    document.getElementById("current_time").innerHTML = parseFloat(
-      current_time / 60
-    ).toFixed(2);
-    document.getElementById("left_time").innerHTML = parseFloat(
-      left_time / 60
-    ).toFixed(2);
+    var d1 = new Date(null);
+    var d2  = new Date(null);
+    d1.setSeconds(current_time); // specify value for SECONDS here
+    d2.setSeconds(duration);
+    document.getElementById("current_time").innerHTML =  d1.toISOString().substr(11, 8);
+    document.getElementById("left_time").innerHTML = d2.toISOString().substr(11,8);
     document.getElementById("song_name").innerHTML = "lol";
 
     // console.log(playPercent)

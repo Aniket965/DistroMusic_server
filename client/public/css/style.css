@@ -9,7 +9,7 @@ body {
   height: 20vh;
   width: 100%;
   display: grid;
-  grid-template-columns: 20vw auto 20vw;
+  grid-template-columns:20vw auto 20vw;
   align-items: center;
 }
 .sideButton {
@@ -61,7 +61,7 @@ body {
   /* background: pink; */
   height: 16vh;
   width: 96%;
-  grid-template-columns: 10vw 10vw auto 10vw 10vw;
+  grid-template-columns: 20vw 10vw auto 10vw 20vw;
   /* border-top: 4px
    solid rgb(206, 206, 206);  */
 }
