@@ -1,9 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500");
 body {
-    font-family: 'Montserrat', sans-serif;
-    overflow: hidden;
-    margin: 0;
-
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  margin: 0;
 }
 .DeviceSelector {
   /* background: red; */
@@ -12,8 +11,6 @@ body {
   display: grid;
   grid-template-columns: 20vw auto 20vw;
   align-items: center;
-
-
 }
 .sideButton {
   width: 3rem;
@@ -24,7 +21,7 @@ body {
   justify-content: center;
   align-items: center;
   box-shadow: 1px 1px 5px 0px;
-  background: #EDECF3;
+  background: #edecf3;
   justify-self: center;
 }
 .devices {
@@ -43,7 +40,6 @@ body {
   color: gray;
 }
 
-
 .header {
   /* background: red; */
   margin-top: 6vh;
@@ -60,7 +56,6 @@ body {
   font-weight: 500;
 }
 
-
 .music-player {
   display: grid;
   /* background: pink; */
@@ -71,16 +66,16 @@ body {
    solid rgb(206, 206, 206);  */
 }
 
-.play-button svg{
-display: flex;
-justify-content: center;
-align-items: center;
-widows: 50px;
-height: 100px;
-fill: none;
+.play-button svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  widows: 50px;
+  height: 100px;
+  fill: none;
 }
 
-.player-container{
+.player-container {
   display: flex;
   justify-content: center;
   /* background: red; */
@@ -101,50 +96,74 @@ fill: none;
 }
 
 svg {
-	margin: 0px auto;
+  margin: 0px auto;
   display: block;
 }
 /* This animates the circle when it switches to play */
 #circle {
-	transition: stroke-dashoffset 300ms ease-in;
-	stroke-dashoffset: 0;
+  transition: stroke-dashoffset 300ms ease-in;
+  stroke-dashoffset: 0;
 }
 #circle.play {
-	stroke-dashoffset: 314;
+  stroke-dashoffset: 314;
 }
 
-.song-visualizer{
- margin-top: 5vh;
+.song-visualizer {
+  margin-top: 5vh;
   height: 40vh;
   width: 100%;
 }
-.Volume{
+.Volume {
   cursor: pointer;
 }
 
 .song-visualizer {
- 
-  background: red;
-  -webkit-animation: mymove 5s infinite; 
-  animation: mymove 5s infinite;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+	animation: Gradient 15s ease infinite;
+}
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
 }
 
 
-@-webkit-keyframes mymove {
-  from {background-color: red;}
-  to {background-color: blue;}
-}
+/* hr {
 
 
-@keyframes mymove {
-  from {background-color: red;}
-  to {background-color: blue;}
-}
-
-
- /* hr { 
-  
- 
   margin-top:2em;
   margin-left: 2em;
   margin-right: 2em;
@@ -152,14 +171,13 @@ svg {
   border-width: 2px;
 }   */
 
-
 .container {
-  margin-top:2em;
+  margin-top: 2em;
   margin-left: 2em;
   margin-right: 2em;
   /* width: 100%; */
   background-color: #ddd;
-  line-height:10px;
+  line-height: 10px;
 }
 
 /* .skills {
@@ -171,5 +189,5 @@ svg {
 
 .load {
   width: 90%;
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
