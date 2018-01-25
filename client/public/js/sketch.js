@@ -30,8 +30,6 @@ function draw() {
   var canvas = createCanvas(div.offsetWidth, div.offsetHeight);
   
   canvas.parent("sv");
-  //background(15, 32, 50);
-  
   var spectrum = fft.analyze();
   noStroke();
   fill(255); // spectrum is green
@@ -44,11 +42,14 @@ function draw() {
    current_time= song.currentTime()
     left_time=current_time-duration;
     playPercent=(current_time/duration)*100;
-
+    // var myElement = document.getElementById('load')
+    // myElement.style.width = playPercent;
+    //var myElement=$(load).width()
+    //console.log(myElement);
     document.getElementById('current_time').innerHTML=parseFloat(current_time/60).toFixed(2)
     document.getElementById('left_time').innerHTML=parseFloat(left_time/60).toFixed(2)
     document.getElementById('song_name').innerHTML="lol";
-    //document.querySelector(".music-player").style.border-top.backgroundColor = "red";
+    
   }
 }
 const togglePlaying = () => {

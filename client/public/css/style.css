@@ -67,8 +67,10 @@ body {
   height: 16vh;
   width: 96%;
   grid-template-columns: 10vw 10vw auto 10vw 10vw;
-  border-top: 4px solid rgb(206, 206, 206);
+  /* border-top: 4px
+   solid rgb(206, 206, 206);  */
 }
+
 .play-button svg{
 display: flex;
 justify-content: center;
@@ -83,7 +85,7 @@ fill: none;
   justify-content: center;
   /* background: red; */
   width: 100%;
-  margin-top: 2vh;
+  margin-top: 1vh;
 }
 .music-player div {
   justify-self: center;
@@ -137,4 +139,37 @@ svg {
 @keyframes mymove {
   from {background-color: red;}
   to {background-color: blue;}
+}
+
+
+ /* hr { 
+  
+ 
+  margin-top:2em;
+  margin-left: 2em;
+  margin-right: 2em;
+  border-style: inset;
+  border-width: 2px;
+}   */
+
+
+.container {
+  margin-top:2em;
+  margin-left: 2em;
+  margin-right: 2em;
+  /* width: 100%; */
+  background-color: #ddd;
+  line-height:10px;
+}
+
+/* .skills {
+  text-align: right;
+  padding-right: 20px;
+  line-height: 40px;
+  color: white;
+} */
+
+.load {
+  width: 90%;
+  background-color: #4CAF50;
 }
